@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,maximum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="../font_2887838_qahtuytcbnl/iconfont.css">
+    <link rel="stylesheet" href="./CSS/animate.min.css">
+</head>
+
+<body>
+
+    <div class="weather">
+
+        <!--导航部分  -->
+        <div class="nav">
+
+            <!-- 定位 -->
+            <div class="location">
+                <span class="iconfont icon-ditudingwei"></span>
+                <span id="location-city" class="location-city"></span>
+            </div>
+
+            <!-- 搜索 -->
+            <div class="search">
+                <span class="iconfont icon-sousuo" id="search-icon"></span>
+                <input class="input-box" id="search-box" type="text" name="">
+            </div>
+
+            <!-- 下拉菜单 -->
+            <div id="list" class="list">
+                <div class="list-title">
+                    <span class="all-delete">全部删除</span>
+                    <span id="close" class="close">关闭</span>
+                </div>
+                <div id="list-tag" class="list-tag">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- 主体部分 -->
+        <div class="main">
+
+
+            <!-- 24小时天气 -->
+            <div class="weather-status">
+                <div class="weather-data-box wow rollIn">
+                    <div class="weather-data">
+
+                        <span class="date1"></span>
+                        <span class="date2"></span>
+                    </div>
+
+                    <div class="weather-tem">
+                        <div class="tem"></div>
+                        <div class="tem-icon">
+                            <div class="icon-content">
+                                <div class="icon-content-icon"></div>
+                                <div class="icon-content-text"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wind">
+                        <span class="wind-direction"></span>
+                        <span class="wind-speed"></span>
+                        <span class="wind-force"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 每小时天气 -->
+            <div class="hours-box wow flipInY">
+
+                <div class="day-weather">
+                    <div class="day-title">24 hours</div>
+                    <ul id="hours-weather" class="hours-weather">
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 未来一周天气 -->
+            <div class="future-weather wow rotateInDownLeft">
+                <div class="future-title">未来7天天气</div>
+                <div class="future-weather-box">
+
+                </div>
+            </div>
+
+            <!-- 空气质量与生活指数 -->
+            <div class="air-life-box">
+                <div class="air-life">
+                    <div class="air-life-title">生活质量与空气指标</div>
+                    <ul class="air-life-list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 加载提示 -->
+        <div id="tip" class="tip">
+            <div class="tip-line">
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./js/rem.js"></script>
+    <script src="./jquery/jquery-3.2.1.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/wow.min.js"></script>
+    <script>
+        var wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true,
+            live: true
+        });
+        new WOW().init();
+    </script>
+</body>
+
+</html>
